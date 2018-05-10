@@ -1,53 +1,59 @@
 public class User {
-	private int id;
+	private int userId;
+	private String userImg;
 	private String userName;
 	private String password;
 	private String userLove;
 	private Set<Plan> plans = new HashSet<Plan>();
-	private Set<Calendar> calendars = new HashSet<Calendar>();}
-
-public class Book {
-	private int bookId;
-	private String bookName;
-	private String author;
-	private Set<Chapter> chapters = new HashSet<Chapter>();}
-
+	private Set<Calendar> calendars = new HashSet<Calendar>();
+}
+public class University {
+	private int universityId;
+	private String universityName;
+	private String district;
+	private String information;
+	private Set<Major> majors = new HashSet<Major>();
+}
 public class Plan {
 	private int planId;
 	private Book book;
 	private User user;
 	private int number;
 	private Date beginTime;
-	private int needTime;}
-
-public class Calendar {
-	private int calendarId;
-	private String bookName;
-	private Chapter chapter;
-	private String time;
-	private User user;}
-
-public class University {
-	private int universityId;
-	private String universityName;
-	private String district;
-	private String information;
-	private Set<Major> majors = new HashSet<Major>();}
-
-public class Major {
-	private int majorId;
-	private String majorName;
-	private University university;}
-
-public class Chapter {
-	private int chapterId;
-	private int chapterNumber;
-	private String chapterName;
-	private Book book;}
-
+	private int needTime;
+}
 public class Mark {
 	private int markid;
 	private int universityId;
 	private int majorId;
-	private int mark;}
+	private int mark;
+}
+public class Major {
+	private int majorId;
+	private String majorName;
+	private University university;
+}
+public class Chapter {
+	private int chapterId;
+	private int chapterNumber;
+	private String chapterName;
+	private Book book;
+}
+public class Book {
+	private int bookId;
+	private String bookImg;
+	private String bookName;
+	private String author;
+	private int bookType;	
+	private Set<Chapter> chapters = new HashSet<Chapter>();
+}
+public class Calendar {
+	private int calendarId;
+	private String bookName;
+	private Chapter chapter;
+	private Date time;
+	private int number;
+	private User user;
+}
+
 
